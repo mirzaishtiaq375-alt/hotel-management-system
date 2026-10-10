@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="login-screen" class="screen active">
+      <div class="login-card">
+        <div class="brand">
+          <div class="brand-mark">H</div>
+          <div>
+            <h1>Hotel Admin</h1>
+            <p>Management Portal</p>
+          </div>
+        </div>
+
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="admin" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="admin123" required />
+
+          <button type="submit">Login</button>
+          <p id="login-message" class="message"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="dashboard-screen" class="screen">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Hotel Operations</p>
+          <h2>Dashboard</h2>
+        </div>
+        <button id="logout-btn" class="ghost-btn">Logout</button>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card highlight">
+          <span>Occupancy</span>
+          <strong id="occupancy-rate">0%</strong>
+        </article>
+        <article class="stat-card">
+          <span>Rooms Available</span>
+          <strong id="available-rooms">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Total Revenue</span>
+          <strong id="total-revenue">$0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Check-ins Today</span>
+          <strong id="checkins-today">0</strong>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Room Status</h3>
+          </div>
+          <div id="rooms-list" class="list"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Recent Bookings</h3>
+          </div>
+          <div id="bookings-list" class="list"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
